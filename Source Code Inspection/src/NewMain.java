@@ -25,7 +25,9 @@ public class NewMain {
         
         // Inserindo nota de 5
         try {
-            ticketMachine.inserir(5);
+            ticketMachine.inserir(10);
+            ticketMachine.inserir(10);
+            ticketMachine.inserir(50);
         } catch (PapelMoedaInvalidaException ex) {
             Logger.getLogger(NewMain.class.getName()).log(Level.SEVERE, null, ex);
         }
