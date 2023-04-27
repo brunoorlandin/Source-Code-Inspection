@@ -57,46 +57,64 @@ public class TicketMachineTest {
     /**
      * Test of getSaldo method, of class TicketMachine.
      */
-    /*
+    
     @Test
-    public void testGetSaldo() {
+    public void testGetSaldo() throws Exception {
         System.out.println("getSaldo");
-        TicketMachine instance = null;
-        int expResult = 0;
-        int result = instance.getSaldo();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+        TicketMachine instance = new TicketMachine(5);
+       
+        instance.inserir(100);
+     
+        assertEquals(100,instance.getSaldo() );
+    }
 
     /**
      * Test of getTroco method, of class TicketMachine.
      */
-    /*
+    
     @Test
-    public void testGetTroco() {
+    public void testGetTroco() throws Exception{
         System.out.println("getTroco");
-        TicketMachine instance = null;
-        Iterator<PapelMoeda> expResult = null;
-        Iterator<PapelMoeda> result = instance.getTroco();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+        TicketMachine instance = new TicketMachine(5);
+        
+        instance.inserir(50);
+        instance.inserir(5);
 
+        Iterator<PapelMoeda> result = instance.getTroco();
+
+
+        int[] expectedResult = new int[]{0,1,0,0,1,0};
+        
+        int count = 0;
+        while(result.hasNext()){
+            
+            PapelMoeda papelMoeda = result.next();
+            assertEquals(expectedResult[count], papelMoeda.getQuantidade());
+            
+            count++;
+
+        }
+    }
+    
     /**
      * Test of imprimir method, of class TicketMachine.
      */
-    /*
+    
     @Test
     public void testImprimir() throws Exception {
         System.out.println("imprimir");
-        TicketMachine instance = null;
-        String expResult = "";
+        
+        TicketMachine instance = new TicketMachine(5);
+        instance.inserir(100);
+        
+        String expResult =  "*****************\n" +
+                            "*** R$ 95,00 ****\n" +
+                            "*****************\n";
+        
         String result = instance.imprimir();
+        
+
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+    }
     
 }

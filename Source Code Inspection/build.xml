@@ -9,10 +9,6 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="Source_Code_Inspection" default="default" basedir=".">
     <description>Builds, tests, and runs the project Source Code Inspection.</description>
-	<path id="classpath.test">
-		<pathelement location="lib/junit-4.13.2.jar" />
-		<path refid="classpath.base" />
-  	</path>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
