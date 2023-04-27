@@ -10,6 +10,7 @@ jobs:
   Job1:
     runs-on: ubuntu-latest
     steps:
-      - run: build.sh
+      - run: chmod +x ./build.sh
+      - run: ./build.sh
   
     
