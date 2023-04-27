@@ -22,6 +22,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Ant
-      run: |
-        pwd
-        ls
+      run: ant -noinput -buildfile ./Source\ Code\ Inspection/build.xml
