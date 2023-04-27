@@ -23,3 +23,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Ant
       run: ant -noinput -buildfile ./Source\ Code\ Inspection/build.xml
+      artifacts:
+        paths:
+        - ./lib/junit-4.13.2.jar
+        - ./lib/hamcrest-core-1.3.jar
