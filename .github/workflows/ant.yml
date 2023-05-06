@@ -24,6 +24,6 @@ jobs:
     - name: Build with Ant
       #run: ant -noinput -buildfile ./Source\ Code\ Inspection/build.xml
       run: |
-        pwd
-        ls
+        chmod +x ./build.sh
+        ./build.sh
 
