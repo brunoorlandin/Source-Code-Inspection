@@ -20,22 +20,6 @@ public class TicketMachineTest {
     
     public TicketMachineTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     /**
      * Test of inserir method, of class TicketMachine.
@@ -113,7 +97,7 @@ public class TicketMachineTest {
         
         String result = instance.imprimir();
         
-
+        
         assertEquals(expResult, result);
     }
     
